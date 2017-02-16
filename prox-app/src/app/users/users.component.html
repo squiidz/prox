@@ -1,0 +1,30 @@
+  <form #registrationForm="ngForm" (ngSubmit)="pushUser(newUser.name, newUser.age)">
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <md-input-container>
+        <input md-input id="name" [(ngModel)]="newUser.name" type="text" class="form-control" placeholder="Name" ngControl="name">
+      </md-input-container>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age</label>
+      <md-input-container>
+        <input id="age" [(ngModel)]="newUser.age" type="text" class="form-control" placeholder="Age" ngControl="age">
+      </md-input-container>
+    </div>
+
+    <div class="form-group">
+      <button md-raised-button type="submit" class="btn btn-primary">Add</button>
+    </div>
+
+  </form>
+
+<ul>
+  <li *ngFor="let user of users">
+    name: {{ user.name }} |
+    age: {{ user.age }}
+    <button md-raised-button (click)="removeUser(user.id)">x</button>
+  </li>
+</ul>
+

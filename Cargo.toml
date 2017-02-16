@@ -1,0 +1,19 @@
+[package]
+name = "prox"
+version = "0.1.0"
+authors = ["jchaput <piinkyz05@gmail.com>"]
+
+[dependencies]
+lazy_static = "*"
+
+rocket = "*"
+rocket_codegen = "*"
+rocket_contrib = "*"
+
+serde = "*"
+serde_json = "*"
+serde_derive = "*"
+
+diesel = { version = "*", features = ["postgres"] }
+diesel_codegen = { version = "*", features = ["postgres"] }
+dotenv = "*"
